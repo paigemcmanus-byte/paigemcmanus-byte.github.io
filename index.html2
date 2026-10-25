@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paige McManus | Personal Website</title>
+  <style>
+    :root {
+      font-family: Arial, sans-serif;
+      color: #24211e;
+      background: #f6f2ec;
+      scroll-behavior: smooth;
+    }
+
+    * { box-sizing: border-box; }
+
+    body { margin: 0; line-height: 1.6; }
+
+    header, main, footer {
+      width: min(100% - 2rem, 960px);
+      margin: auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid #d9d0c5;
+    }
+
+    .name { font-weight: bold; }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    a { color: #80432f; }
+    nav a { text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+
+    section { padding: 3.5rem 0; scroll-margin-top: 1rem; }
+    h1 { font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1; margin: 0 0 1rem; }
+    h2 { font-size: 2rem; }
+    .intro { max-width: 620px; font-size: 1.15rem; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    figure { margin: 0; }
+    .concept-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      background: #dfb99c;
+    }
+
+    figcaption { color: #625b55; font-size: 0.85rem; margin-top: 0.5rem; }
+
+    .project, .interest-list {
+      background: #fff;
+      border: 1px solid #e5ddd3;
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+
+    .interest-list { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .interest-list span { background: #f3e8dc; border-radius: 20px; padding: 0.4rem 0.8rem; }
+
+    .social-links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      background: #80432f;
+      color: white;
+      text-decoration: none;
+    }
+
+    .button:hover { background: #5f3022; }
+
+    footer {
+      border-top: 1px solid #d9d0c5;
+      padding: 1.5rem 0;
+      color: #625b55;
+    }
+
+    @media (max-width: 650px) {
+      header { align-items: flex-start; flex-direction: column; }
+      .hero { grid-template-columns: 1fr; }
+      section { padding: 2.5rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="name" href="#top">Paige McManus</a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#interests">Interests</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p>Student · Marketing research · Consumer insights</p>
+        <h1 id="page-title">Ideas into insight.</h1>
+        <p class="intro">
+          I’m Paige. I’m interested in how people make everyday choices and
+          how research can help shape better ideas.
+        </p>
+      </div>
+
+      <figure>
+        <!-- This original SVG illustration is embedded in the page, so it
+             does not need a separate image file to display on GitHub Pages. -->
+        <svg class="concept-image" viewBox="0 0 600 520"
+             role="img" aria-labelledby="image-title image-description"
+             xmlns="http://www.w3.org/2000/svg">
+          <title id="image-title">SealSkin concept illustration</title>
+          <desc id="image-description">
+            A mock product card for the proposed SealSkin concept, with a
+            translucent shape representing flexible film.
+          </desc>
+          <rect width="600" height="520" rx="18" fill="#dfb99c"/>
+          <circle cx="490" cy="105" r="58" fill="#f3d08a"/>
+          <path d="M0 390 Q160 320 300 390 T600 365 V520 H0Z" fill="#ba8063" opacity=".55"/>
+          <rect x="180" y="80" width="245" height="330" rx="16" fill="#f8f3eb"/>
+          <text x="210" y="145" font-family="Arial,sans-serif" font-size="14" letter-spacing="3" fill="#6a5145">CONCEPT STUDY</text>
+          <text x="210" y="220" font-family="Arial,sans-serif" font-size="40" font-weight="bold" fill="#30231f">SealSkin</text>
+          <text x="210" y="255" font-family="Arial,sans-serif" font-size="14" letter-spacing="1" fill="#6a5145">A SECOND-SKIN IDEA</text>
+          <path d="M205 287 H395" stroke="#c77a59" stroke-width="2"/>
+          <text x="210" y="321" font-family="Arial,sans-serif" font-size="13" fill="#6a5145">PROPOSED PRODUCT</text>
+          <text x="210" y="345" font-family="Arial,sans-serif" font-size="13" fill="#6a5145">NOT A TESTED PRODUCT</text>
+          <path d="M65 345 Q95 255 135 290 Q155 310 125 350 Q108 375 145 392 Q180 408 150 435 Q115 462 70 430 Q40 408 65 345Z"
+                fill="#fff" fill-opacity=".55" stroke="#fff" stroke-width="3"/>
+        </svg>
+        <figcaption>SealSkin concept illustration · visual mockup</figcaption>
+      </figure>
+    </section>
+
+    <section id="about">
+      <h2>About me</h2>
+      <p>
+        I’m a student interested in marketing, consumer insights, and the
+        stories behind everyday decisions. I enjoy turning questions into
+        research plans and communicating what the evidence can—and cannot—show.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Featured project: SealSkin</h2>
+      <div class="project">
+        <p>
+          SealSkin is a proposed clear, flexible liquid barrier for small cuts
+          and nicks. I explored how active young adults might respond to the
+          concept through an AI-simulated focus group.
+        </p>
+        <p>
+          The discussion raised questions about staying in place during
+          activity, cleanup, price, and trust compared with familiar options.
+        </p>
+        <p>
+          <strong>Research note:</strong> These are tentative themes from
+          fictional AI participants, not findings from real consumers or
+          product testing. They do not establish product safety or effectiveness.
+        </p>
+      </div>
+    </section>
+
+    <section id="interests">
+      <h2>Interests</h2>
+      <div class="interest-list">
+        <span>Consumer behavior</span>
+        <span>Marketing research</span>
+        <span>Product ideas</span>
+        <span>Clear communication</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Connect with me</h2>
+      <p>Visit my profiles:</p>
+      <div class="social-links">
+        <a class="button"
+           href="https://github.com/paigemcmanus-byte/paigemcmanus-byte.github.io"
+           target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="button"
+           href="https://www.linkedin.com/in/paige-mcmanus-275a452b1/"
+           target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#top">Back to top</a>
+  </footer>
+</body>
+</html>
